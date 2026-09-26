@@ -1,0 +1,3903 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="ابني بيتك - أبواب وشبابيك وحلايا وتفصيل حسب الطلب">
+
+    <title>ابني بيتك | أبواب وشبابيك</title>
+
+
+    <style>
+
+        /* =========================
+           الألوان الأساسية
+        ========================= */
+
+        :root {
+
+            --green: #17372b;
+            --dark-green: #10281f;
+            --light-green: #285642;
+
+            --gold: #c99a55;
+            --light-gold: #e0b86e;
+
+            --cream: #f5efe5;
+            --white: #ffffff;
+
+            --text: #222222;
+            --gray: #777777;
+
+            --shadow:
+                0 15px 40px rgba(0, 0, 0, 0.12);
+
+        }
+
+
+        /* =========================
+           الإعدادات العامة
+        ========================= */
+
+        * {
+
+            margin: 0;
+            padding: 0;
+
+            box-sizing: border-box;
+
+        }
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+
+        body {
+
+            font-family:
+                Tahoma,
+                Arial,
+                sans-serif;
+
+            background: #faf8f4;
+
+            color: var(--text);
+
+            line-height: 1.7;
+
+        }
+
+
+        a {
+
+            text-decoration: none;
+
+            color: inherit;
+
+        }
+
+
+        button,
+        input,
+        textarea {
+
+            font-family: inherit;
+
+        }
+
+
+        button {
+
+            cursor: pointer;
+
+        }
+
+
+        .container {
+
+            width: 92%;
+
+            max-width: 1200px;
+
+            margin: auto;
+
+        }
+
+
+
+        /* =========================
+           الهيدر
+        ========================= */
+
+        header {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            background:
+                rgba(23, 55, 43, 0.98);
+
+            color: white;
+
+            box-shadow:
+                0 4px 20px rgba(0,0,0,.18);
+
+        }
+
+
+        .navbar {
+
+            min-height: 80px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+        }
+
+
+        .logo {
+
+            color: var(--light-gold);
+
+            font-size: 28px;
+
+            font-weight: 900;
+
+        }
+
+
+        .logo small {
+
+            display: block;
+
+            color: #ddd;
+
+            font-size: 10px;
+
+            letter-spacing: 2px;
+
+        }
+
+
+        .nav-links {
+
+            list-style: none;
+
+            display: flex;
+
+            gap: 25px;
+
+        }
+
+
+        .nav-links a {
+
+            color: white;
+
+            transition: .3s;
+
+        }
+
+
+        .nav-links a:hover {
+
+            color: var(--light-gold);
+
+        }
+
+
+        .cart-button {
+
+            border: none;
+
+            background: var(--gold);
+
+            color: white;
+
+            padding: 11px 17px;
+
+            border-radius: 9px;
+
+            font-weight: bold;
+
+        }
+
+
+        .cart-count {
+
+            background: #9e302d;
+
+            padding: 2px 7px;
+
+            border-radius: 20px;
+
+            margin-right: 5px;
+
+        }
+
+
+        .menu-button {
+
+            display: none;
+
+            border: 1px solid #ffffff55;
+
+            background: transparent;
+
+            color: white;
+
+            padding: 8px 12px;
+
+            border-radius: 8px;
+
+        }
+
+
+
+        /* =========================
+           الصفحة الرئيسية
+        ========================= */
+
+        .hero {
+
+            min-height: 650px;
+
+            display: flex;
+
+            align-items: center;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,.75),
+                    rgba(0,0,0,.25)
+                ),
+
+                url("images/door-2.jpeg")
+                center/cover;
+
+        }
+
+
+        .hero-content {
+
+            max-width: 700px;
+
+            color: white;
+
+        }
+
+
+        .hero-badge {
+
+            display: inline-block;
+
+            background: var(--gold);
+
+            padding: 7px 15px;
+
+            border-radius: 30px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .hero h1 {
+
+            font-size: clamp(40px, 6vw, 70px);
+
+            line-height: 1.15;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .hero h1 span {
+
+            color: var(--light-gold);
+
+        }
+
+
+        .hero p {
+
+            font-size: 20px;
+
+            color: #eeeeee;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        .button {
+
+            display: inline-block;
+
+            border: none;
+
+            border-radius: 9px;
+
+            padding: 13px 25px;
+
+            font-weight: bold;
+
+            transition: .3s;
+
+        }
+
+
+        .button:hover {
+
+            transform: translateY(-3px);
+
+        }
+
+
+        .gold-button {
+
+            background: var(--gold);
+
+            color: white;
+
+        }
+
+
+        .green-button {
+
+            background: var(--green);
+
+            color: white;
+
+            border: 1px solid #ffffff55;
+
+        }
+
+
+
+        /* =========================
+           الأقسام
+        ========================= */
+
+        .section {
+
+            padding: 85px 0;
+
+        }
+
+
+        .section-title {
+
+            text-align: center;
+
+            margin-bottom: 45px;
+
+        }
+
+
+        .section-title small {
+
+            color: var(--gold);
+
+            font-weight: bold;
+
+        }
+
+
+        .section-title h2 {
+
+            color: var(--green);
+
+            font-size: 42px;
+
+            margin: 5px 0;
+
+        }
+
+
+        .section-title p {
+
+            color: var(--gray);
+
+        }
+
+
+
+        /* =========================
+           أقسام المنتجات
+        ========================= */
+
+        .categories {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(5, 1fr);
+
+            gap: 15px;
+
+        }
+
+
+        .category {
+
+            background: white;
+
+            border: 1px solid #e7dfd3;
+
+            border-radius: 15px;
+
+            padding: 25px 10px;
+
+            text-align: center;
+
+            box-shadow: var(--shadow);
+
+            transition: .3s;
+
+            cursor: pointer;
+
+        }
+
+
+        .category:hover {
+
+            transform: translateY(-7px);
+
+            border-color: var(--gold);
+
+        }
+
+
+        .category-icon {
+
+            font-size: 38px;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        .category h3 {
+
+            color: var(--green);
+
+        }
+
+
+
+        /* =========================
+           المنتجات
+        ========================= */
+
+        .products {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+
+        }
+
+
+        .product-card {
+
+            background: white;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            box-shadow: var(--shadow);
+
+            border: 1px solid #eee;
+
+            transition: .3s;
+
+        }
+
+
+        .product-card:hover {
+
+            transform: translateY(-8px);
+
+        }
+
+
+        .product-image {
+
+            height: 400px;
+
+            overflow: hidden;
+
+            position: relative;
+
+            background: #eee;
+
+        }
+
+
+        .product-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: .5s;
+
+        }
+
+
+        .product-card:hover
+        .product-image img {
+
+            transform: scale(1.04);
+
+        }
+
+
+        .product-tag {
+
+            position: absolute;
+
+            top: 15px;
+
+            right: 15px;
+
+            background: var(--green);
+
+            color: white;
+
+            padding: 6px 12px;
+
+            border-radius: 20px;
+
+            font-size: 12px;
+
+        }
+
+
+        .product-info {
+
+            padding: 22px;
+
+        }
+
+
+        .product-info h3 {
+
+            color: var(--green);
+
+            font-size: 24px;
+
+        }
+
+
+        .product-info p {
+
+            color: var(--gray);
+
+            margin: 5px 0;
+
+        }
+
+
+        .price {
+
+            color: #704a2a;
+
+            font-size: 28px;
+
+            font-weight: bold;
+
+            margin: 10px 0;
+
+        }
+
+
+        .price span {
+
+            font-size: 15px;
+
+            font-weight: normal;
+
+        }
+
+
+        .product-buttons {
+
+            display: flex;
+
+            gap: 10px;
+
+        }
+
+
+        .product-buttons button {
+
+            flex: 1;
+
+            border: none;
+
+            padding: 11px;
+
+            border-radius: 8px;
+
+        }
+
+
+        .add-cart {
+
+            background: var(--gold);
+
+            color: white;
+
+        }
+
+
+        .show-details {
+
+            background: #edf1ed;
+
+            color: var(--green);
+
+        }
+
+
+
+        /* =========================
+           قسم التفصيل
+        ========================= */
+
+        .custom-section {
+
+            background: var(--green);
+
+            color: white;
+
+        }
+
+
+        .custom-section
+        .section-title h2 {
+
+            color: white;
+
+        }
+
+
+        .custom-section
+        .section-title p {
+
+            color: #ddd;
+
+        }
+
+
+        .custom-box {
+
+            background: white;
+
+            color: #222;
+
+            padding: 35px;
+
+            border-radius: 18px;
+
+            max-width: 900px;
+
+            margin: auto;
+
+        }
+
+
+        .form-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 20px;
+
+        }
+
+
+        .form-group {
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .form-group label {
+
+            display: block;
+
+            color: var(--green);
+
+            font-weight: bold;
+
+            margin-bottom: 7px;
+
+        }
+
+
+        .form-group input,
+        .form-group textarea {
+
+            width: 100%;
+
+            border: 1px solid #ddd;
+
+            border-radius: 8px;
+
+            padding: 12px;
+
+            outline: none;
+
+        }
+
+
+        .form-group textarea {
+
+            min-height: 130px;
+
+            resize: vertical;
+
+        }
+
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+
+            border-color: var(--gold);
+
+        }
+
+
+        .upload-box {
+
+            border: 2px dashed var(--gold);
+
+            padding: 22px;
+
+            text-align: center;
+
+            border-radius: 10px;
+
+            background: #fffaf2;
+
+            color: var(--green);
+
+        }
+
+
+        .upload-box input {
+
+            margin-top: 10px;
+
+        }
+
+
+        .image-preview {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+            margin-top: 12px;
+
+        }
+
+
+        .image-preview img {
+
+            width: 75px;
+
+            height: 75px;
+
+            object-fit: cover;
+
+            border-radius: 8px;
+
+        }
+
+
+
+        /* =========================
+           الشبابيك والحلايا
+        ========================= */
+
+        .empty-card {
+
+            background: white;
+
+            border-radius: 18px;
+
+            padding: 50px 25px;
+
+            text-align: center;
+
+            box-shadow: var(--shadow);
+
+        }
+
+
+        .empty-card .big-icon {
+
+            font-size: 75px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .empty-card h3 {
+
+            color: var(--green);
+
+            font-size: 28px;
+
+        }
+
+
+        .empty-card p {
+
+            color: var(--gray);
+
+            margin-bottom: 20px;
+
+        }
+
+
+
+        /* =========================
+           عن الموقع
+        ========================= */
+
+        .about {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 45px;
+
+            align-items: center;
+
+        }
+
+
+        .about-image img {
+
+            width: 100%;
+
+            height: 430px;
+
+            object-fit: cover;
+
+            border-radius: 20px;
+
+        }
+
+
+        .about h2 {
+
+            color: var(--green);
+
+            font-size: 40px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .features {
+
+            list-style: none;
+
+            margin-top: 20px;
+
+        }
+
+
+        .features li {
+
+            margin: 9px 0;
+
+        }
+
+
+        .features li::before {
+
+            content: "✓";
+
+            color: var(--gold);
+
+            font-weight: bold;
+
+            margin-left: 9px;
+
+        }
+
+
+
+        /* =========================
+           التواصل
+        ========================= */
+
+        .contact-section {
+
+            background: var(--cream);
+
+        }
+
+
+        .contact-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .contact-card {
+
+            background: white;
+
+            padding: 25px;
+
+            text-align: center;
+
+            border-radius: 15px;
+
+            box-shadow: 0 8px 25px rgba(0,0,0,.06);
+
+        }
+
+
+        .contact-card .icon {
+
+            font-size: 35px;
+
+        }
+
+
+        .contact-card h3 {
+
+            color: var(--green);
+
+        }
+
+
+        .contact-card a {
+
+            color: #704a2a;
+
+            font-weight: bold;
+
+        }
+
+
+
+        /* =========================
+           الفوتر
+        ========================= */
+
+        footer {
+
+            background: #101813;
+
+            color: #ddd;
+
+            padding: 50px 0 20px;
+
+        }
+
+
+        .footer-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1.5fr 1fr 1fr;
+
+            gap: 30px;
+
+        }
+
+
+        footer h3 {
+
+            color: var(--light-gold);
+
+            margin-bottom: 10px;
+
+        }
+
+
+        footer p {
+
+            color: #aaa;
+
+        }
+
+
+        .copyright {
+
+            border-top: 1px solid #2d3b33;
+
+            margin-top: 30px;
+
+            padding-top: 18px;
+
+            text-align: center;
+
+            color: #888;
+
+        }
+
+
+
+        /* =========================
+           نافذة الصور
+        ========================= */
+
+        .modal {
+
+            display: none;
+
+            position: fixed;
+
+            inset: 0;
+
+            z-index: 2000;
+
+            background:
+                rgba(0,0,0,.85);
+
+            padding: 25px;
+
+            overflow-y: auto;
+
+        }
+
+
+        .modal.active {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+        }
+
+
+        .modal-content {
+
+            width: 100%;
+
+            max-width: 1000px;
+
+            background: white;
+
+            border-radius: 18px;
+
+            padding: 25px;
+
+            position: relative;
+
+        }
+
+
+        .close-modal {
+
+            position: absolute;
+
+            left: 15px;
+
+            top: 15px;
+
+            width: 40px;
+
+            height: 40px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: var(--green);
+
+            color: white;
+
+            font-size: 25px;
+
+        }
+
+
+        .modal-content h2 {
+
+            text-align: center;
+
+            color: var(--green);
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .main-gallery {
+
+            height: 550px;
+
+            background: #eee;
+
+            border-radius: 12px;
+
+            overflow: hidden;
+
+        }
+
+
+        .main-gallery img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: contain;
+
+        }
+
+
+        .thumbnails {
+
+            display: flex;
+
+            gap: 8px;
+
+            overflow-x: auto;
+
+            margin-top: 12px;
+
+        }
+
+
+        .thumbnails img {
+
+            width: 80px;
+
+            height: 90px;
+
+            object-fit: cover;
+
+            border-radius: 7px;
+
+            cursor: pointer;
+
+            border: 2px solid transparent;
+
+        }
+
+
+        .thumbnails img:hover {
+
+            border-color: var(--gold);
+
+        }
+
+
+
+        /* =========================
+           السلة
+        ========================= */
+
+        .cart-panel {
+
+            position: fixed;
+
+            top: 0;
+
+            left: -430px;
+
+            width: min(420px, 92%);
+
+            height: 100vh;
+
+            background: white;
+
+            z-index: 3000;
+
+            box-shadow:
+                10px 0 30px rgba(0,0,0,.25);
+
+            padding: 25px;
+
+            transition: .35s;
+
+            overflow-y: auto;
+
+        }
+
+
+        .cart-panel.active {
+
+            left: 0;
+
+        }
+
+
+        .cart-header {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            border-bottom: 1px solid #ddd;
+
+            padding-bottom: 15px;
+
+        }
+
+
+        .cart-header h2 {
+
+            color: var(--green);
+
+        }
+
+
+        .close-cart {
+
+            border: none;
+
+            background: var(--green);
+
+            color: white;
+
+            width: 38px;
+
+            height: 38px;
+
+            border-radius: 50%;
+
+            font-size: 20px;
+
+        }
+
+
+        .cart-item {
+
+            display: flex;
+
+            gap: 12px;
+
+            padding: 15px 0;
+
+            border-bottom: 1px solid #eee;
+
+        }
+
+
+        .cart-item img {
+
+            width: 70px;
+
+            height: 80px;
+
+            object-fit: cover;
+
+            border-radius: 8px;
+
+        }
+
+
+        .cart-item h4 {
+
+            color: var(--green);
+
+        }
+
+
+        .delete-item {
+
+            border: none;
+
+            background: #eee;
+
+            padding: 4px 8px;
+
+            border-radius: 5px;
+
+            margin-top: 5px;
+
+        }
+
+
+        .cart-total {
+
+            font-size: 22px;
+
+            color: #704a2a;
+
+            font-weight: bold;
+
+            border-top: 1px solid #ddd;
+
+            padding-top: 15px;
+
+            margin-top: 15px;
+
+        }
+
+
+        .whatsapp-order {
+
+            width: 100%;
+
+            border: none;
+
+            background: #25d366;
+
+            color: white;
+
+            padding: 14px;
+
+            border-radius: 9px;
+
+            margin-top: 15px;
+
+            font-weight: bold;
+
+        }
+
+
+
+        /* =========================
+           إشعار
+        ========================= */
+
+        .toast {
+
+            position: fixed;
+
+            bottom: 25px;
+
+            right: 25px;
+
+            background: var(--green);
+
+            color: white;
+
+            padding: 14px 20px;
+
+            border-radius: 9px;
+
+            transform:
+                translateY(120px);
+
+            transition: .3s;
+
+            z-index: 5000;
+
+        }
+
+
+        .toast.show {
+
+            transform:
+                translateY(0);
+
+        }
+
+
+
+        /* =========================
+           الموبايل
+        ========================= */
+
+        @media(max-width: 900px) {
+
+            .nav-links {
+
+                display: none;
+
+            }
+
+
+            .menu-button {
+
+                display: block;
+
+            }
+
+
+            .categories {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+            }
+
+
+            .products {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+            }
+
+
+            .about {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .contact-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .footer-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .form-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+
+        @media(max-width: 550px) {
+
+            .navbar {
+
+                min-height: 70px;
+
+            }
+
+
+            .logo {
+
+                font-size: 23px;
+
+            }
+
+
+            .hero {
+
+                min-height: 570px;
+
+            }
+
+
+            .hero p {
+
+                font-size: 17px;
+
+            }
+
+
+            .section {
+
+                padding: 60px 0;
+
+            }
+
+
+            .section-title h2 {
+
+                font-size: 32px;
+
+            }
+
+
+            .categories,
+            .products {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .product-image {
+
+                height: 430px;
+
+            }
+
+
+            .main-gallery {
+
+                height: 430px;
+
+            }
+
+
+            .product-buttons {
+
+                flex-direction: column;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ==================================
+     الهيدر
+================================== -->
+
+<header>
+
+    <div class="container navbar">
+
+
+        <a href="#home" class="logo">
+
+            ابني بيتك
+
+            <small>
+                أبواب • شبابيك • حلايا
+            </small>
+
+        </a>
+
+
+        <nav>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="#home">
+                        الرئيسية
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#products">
+                        المنتجات
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#door-custom">
+                        تفصيل البيبان
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#windows">
+                        الشبابيك
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact">
+                        التواصل
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <div>
+
+            <button
+                class="menu-button"
+                onclick="mobileMenu()">
+
+                ☰
+
+            </button>
+
+
+            <button
+                class="cart-button"
+                onclick="openCart()">
+
+                🛒 السلة
+
+                <span
+                    id="cartCount"
+                    class="cart-count">
+
+                    0
+
+                </span>
+
+            </button>
+
+        </div>
+
+
+    </div>
+
+</header>
+
+
+
+<!-- ==================================
+     الصفحة الرئيسية
+================================== -->
+
+<section
+    class="hero"
+    id="home">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+
+            <span class="hero-badge">
+
+                خشب • جودة • تفصيل
+
+            </span>
+
+
+            <h1>
+
+                ابني بيتك
+
+                <br>
+
+                <span>
+                    بلمسة خشب تليق بيك
+                </span>
+
+            </h1>
+
+
+            <p>
+
+                أبواب وشبابيك وحلايا،
+                مع إمكانية التفصيل حسب
+                المقاس والتصميم.
+
+                <br>
+
+                الحي العاشر - العاشر من رمضان
+                - محافظة الشرقية.
+
+            </p>
+
+
+            <a
+                href="#products"
+                class="button gold-button">
+
+                تصفح المنتجات
+
+            </a>
+
+
+            <a
+                href="https://wa.me/201010881362"
+                target="_blank"
+                class="button green-button">
+
+                تواصل واتساب
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================
+     الأقسام
+================================== -->
+
+<section class="section">
+
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <small>
+                اختار اللي يناسبك
+            </small>
+
+            <h2>
+                أقسام المنتجات
+            </h2>
+
+            <p>
+                كل احتياجاتك الخشبية في مكان واحد
+            </p>
+
+        </div>
+
+
+        <div class="categories">
+
+
+            <div
+                class="category"
+                onclick="goTo('products')">
+
+                <div class="category-icon">
+                    🚪
+                </div>
+
+                <h3>
+                    البيبان
+                </h3>
+
+            </div>
+
+
+            <div
+                class="category"
+                onclick="goTo('door-custom')">
+
+                <div class="category-icon">
+                    🛠️
+                </div>
+
+                <h3>
+                    تفصيل البيبان
+                </h3>
+
+            </div>
+
+
+            <div
+                class="category"
+                onclick="goTo('windows')">
+
+                <div class="category-icon">
+                    🪟
+                </div>
+
+                <h3>
+                    الشبابيك
+                </h3>
+
+            </div>
+
+
+            <div
+                class="category"
+                onclick="goTo('window-custom')">
+
+                <div class="category-icon">
+                    📐
+                </div>
+
+                <h3>
+                    تفصيل الشبابيك
+                </h3>
+
+            </div>
+
+
+            <div
+                class="category"
+                onclick="goTo('halaya')">
+
+                <div class="category-icon">
+                    ✨
+                </div>
+
+                <h3>
+                    الحلايا
+                </h3>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================
+     قسم البيبان
+================================== -->
+
+<section
+    class="section"
+    id="products">
+
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <small>
+                قسم البيبان
+            </small>
+
+            <h2>
+                أبوابنا
+            </h2>
+
+            <p>
+                اختار الباب المناسب وشوف صوره
+                وأضفه إلى السلة.
+            </p>
+
+        </div>
+
+
+
+        <div class="products">
+
+
+            <!-- الباب الأول -->
+
+            <div class="product-card">
+
+
+                <div class="product-image">
+
+                    <span class="product-tag">
+                        متاح
+                    </span>
+
+
+                    <img
+                        src="images/door-1.jpeg"
+                        alt="باب كبس فلندي">
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <h3>
+                        باب كبس فلندي
+                    </h3>
+
+
+                    <p>
+                        تصميم خشبي مميز
+                        بخطوط أفقية.
+                    </p>
+
+
+                    <div class="price">
+
+                        2700
+
+                        <span>
+                            جنيه
+                        </span>
+
+                    </div>
+
+
+                    <div class="product-buttons">
+
+
+                        <button
+                            class="add-cart"
+                            onclick="addToCart()">
+
+                            أضف للسلة
+
+                        </button>
+
+
+                        <button
+                            class="show-details"
+                            onclick="openGallery()">
+
+                            إضافة صورة للتفصيل
+
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- الباب الثاني -->
+
+            <div class="product-card">
+
+
+                <div class="product-image">
+
+                    <span class="product-tag">
+                        خشب
+                    </span>
+
+
+                    <img
+                        src="images/door-2.jpeg"
+                        alt="باب خشبي">
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <h3>
+                        باب خشبي مزخرف
+                    </h3>
+
+
+                    <p>
+                        تصميم كلاسيكي أنيق.
+                    </p>
+
+
+                    <div class="price">
+
+                        2700
+
+                        <span>
+                            جنيه
+                        </span>
+
+                    </div>
+
+
+                    <div class="product-buttons">
+
+
+                        <button
+                            class="add-cart"
+                            onclick="addToCart()">
+
+                            أضف للسلة
+
+                        </button>
+
+
+                        <button
+                            class="show-details"
+                            onclick="openGallery()">
+
+                            إضافة صورة للتفصيل
+
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- الباب الثالث -->
+
+            <div class="product-card">
+
+
+                <div class="product-image">
+
+
+                    <img
+                        src="images/door-3.jpeg"
+                        alt="باب مودرن">
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <h3>
+                        باب كبس فلندي مودرن
+                    </h3>
+
+
+                    <p>
+                        خطوط هندسية بسيطة.
+                    </p>
+
+
+                    <div class="price">
+
+                        2700
+
+                        <span>
+                            جنيه
+                        </span>
+
+                    </div>
+
+
+                    <div class="product-buttons">
+
+
+                        <button
+                            class="add-cart"
+                            onclick="addToCart()">
+
+                            أضف للسلة
+
+                        </button>
+
+
+                        <button
+                            class="show-details"
+                            onclick="openGallery()">
+
+                            إضافة صورة للتفصيل
+
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- الباب الرابع -->
+
+            <div class="product-card">
+
+
+                <div class="product-image">
+
+                    <img
+                        src="images/door-4.jpeg"
+                        alt="باب هندسي">
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <h3>
+                        باب هندسي
+                    </h3>
+
+
+                    <p>
+                        تصميم هندسي مميز.
+                    </p>
+
+
+                    <div class="price">
+
+                        2700
+
+                        <span>
+                            جنيه
+                        </span>
+
+                    </div>
+
+
+                    <div class="product-buttons">
+
+
+                        <button
+                            class="add-cart"
+                            onclick="addToCart()">
+
+                            أضف للسلة
+
+                        </button>
+
+
+                        <button
+                            class="show-details"
+                            onclick="openGallery()">
+
+                            إضافة صورة للتفصيل
+
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- الباب الخامس -->
+
+            <div class="product-card">
+
+
+                <div class="product-image">
+
+                    <img
+                        src="images/door-5.jpeg"
+                        alt="باب خشبي">
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <h3>
+                        باب خطوط جانبية
+                    </h3>
+
+
+                    <p>
+                        تصميم هادئ وأنيق.
+                    </p>
+
+
+                    <div class="price">
+
+                        2700
+
+                        <span>
+                            جنيه
+                        </span>
+
+                    </div>
+
+
+                    <div class="product-buttons">
+
+
+                        <button
+                            class="add-cart"
+                            onclick="addToCart()">
+
+                            أضف للسلة
+
+                        </button>
+
+
+                        <button
+                            class="show-details"
+                            onclick="openGallery()">
+
+                            إضافة صورة للتفصيل
+
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- الباب السادس -->
+
+            <div class="product-card">
+
+
+                <div class="product-image">
+
+                    <img
+                        src="images/door-6.jpeg"
+                        alt="باب كلاسيك">
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <h3>
+                        باب كلاسيك هندسي
+                    </h3>
+
+
+                    <p>
+                        تفاصيل محفورة مميزة.
+                    </p>
+
+
+                    <div class="price">
+
+                        2700
+
+                        <span>
+                            جنيه
+                        </span>
+
+                    </div>
+
+
+                    <div class="product-buttons">
+
+
+                        <button
+                            class="add-cart"
+                            onclick="addToCart()">
+
+                            أضف للسلة
+
+                        </button>
+
+
+                        <button
+                            class="show-details"
+                            onclick="openGallery()">
+
+                            إضافة صورة للتفصيل
+
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- الباب السابع -->
+
+            <div class="product-card">
+
+
+                <div class="product-image">
+
+                    <img
+                        src="images/door-7.jpeg"
+                        alt="باب خشبي">
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <h3>
+                        باب خطوط متقاطعة
+                    </h3>
+
+
+                    <p>
+                        تصميم بسيط وأنيق.
+                    </p>
+
+
+                    <div class="price">
+
+                        2700
+
+                        <span>
+                            جنيه
+                        </span>
+
+                    </div>
+
+
+                    <div class="product-buttons">
+
+
+                        <button
+                            class="add-cart"
+                            onclick="addToCart()">
+
+                            أضف للسلة
+
+                        </button>
+
+
+                        <button
+                            class="show-details"
+                            onclick="openGallery()">
+
+                            إضافة صورة للتفصيل
+
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================
+     تفصيل البيبان
+================================== -->
+
+<section
+    class="section custom-section"
+    id="door-custom">
+
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <small>
+                حسب الطلب
+            </small>
+
+            <h2>
+                تفصيل البيبان
+            </h2>
+
+            <p>
+                اكتب المقاس والتفاصيل
+                وارفع الصور المطلوبة.
+            </p>
+
+        </div>
+
+
+        <div class="custom-box">
+
+
+            <form
+                onsubmit="sendCustomDoor(event)">
+
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label>
+                            الاسم
+                        </label>
+
+                        <input
+                            id="doorName"
+                            required
+                            placeholder="اكتب اسمك">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            رقم الهاتف
+                        </label>
+
+                        <input
+                            id="doorPhone"
+                            required
+                            placeholder="01xxxxxxxxx">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            عرض الباب
+                        </label>
+
+                        <input
+                            id="doorWidth"
+                            placeholder="مثال: 90 سم">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            ارتفاع الباب
+                        </label>
+
+                        <input
+                            id="doorHeight"
+                            placeholder="مثال: 210 سم">
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        تفاصيل الباب
+                    </label>
+
+                    <textarea
+                        id="doorNotes"
+                        placeholder="اكتب اللون والتصميم والتشطيب...">
+                    </textarea>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label class="upload-box">
+
+                        📷 إضافة صورة للتفصيل
+
+                        <br>
+
+                        <input
+                            type="file"
+                            id="doorFiles"
+                            accept="image/*"
+                            multiple
+                            onchange="previewImages(this,'doorPreview')">
+
+                        <div
+                            class="image-preview"
+                            id="doorPreview">
+                        </div>
+
+                    </label>
+
+                </div>
+
+
+                <button
+                    class="button gold-button"
+                    type="submit">
+
+                    إرسال التفاصيل على واتساب
+
+                </button>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================
+     الشبابيك
+================================== -->
+
+<section
+    class="section"
+    id="windows">
+
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <small>
+                قسم الشبابيك
+            </small>
+
+            <h2>
+                الشبابيك
+            </h2>
+
+            <p>
+                قسم الشبابيك جاهز لإضافة
+                الموديلات والأسعار.
+            </p>
+
+        </div>
+
+
+        <div class="empty-card">
+
+            <div class="big-icon">
+                🪟
+            </div>
+
+
+            <h3>
+                قسم الشبابيك
+            </h3>
+
+
+            <p>
+                ابعتلي صور الشبابيك وأسعارها
+                ونضيفها هنا بنفس شكل قسم البيبان.
+            </p>
+
+
+            <button
+                class="button gold-button"
+                onclick="goTo('window-custom')">
+
+                اطلب تفصيل شباك
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================
+     تفصيل الشبابيك
+================================== -->
+
+<section
+    class="section custom-section"
+    id="window-custom">
+
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <small>
+                حسب المقاس
+            </small>
+
+            <h2>
+                تفصيل الشبابيك
+            </h2>
+
+            <p>
+                اكتب مقاس الشباك وارفع صورة التصميم.
+            </p>
+
+        </div>
+
+
+        <div class="custom-box">
+
+
+            <form
+                onsubmit="sendCustomWindow(event)">
+
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label>
+                            الاسم
+                        </label>
+
+                        <input
+                            id="windowName"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            رقم الهاتف
+                        </label>
+
+                        <input
+                            id="windowPhone"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            العرض
+                        </label>
+
+                        <input
+                            id="windowWidth">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            الارتفاع
+                        </label>
+
+                        <input
+                            id="windowHeight">
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        تفاصيل الشباك
+                    </label>
+
+                    <textarea
+                        id="windowNotes"
+                        placeholder="اكتب تفاصيل التصميم...">
+                    </textarea>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label class="upload-box">
+
+                        📷 إضافة صورة للتفصيل
+
+                        <br>
+
+                        <input
+                            type="file"
+                            accept="image/*"
+                            multiple
+                            onchange="previewImages(this,'windowPreview')">
+
+                        <div
+                            class="image-preview"
+                            id="windowPreview">
+                        </div>
+
+                    </label>
+
+                </div>
+
+
+                <button
+                    class="button gold-button"
+                    type="submit">
+
+                    إرسال التفاصيل على واتساب
+
+                </button>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================
+     الحلايا
+================================== -->
+
+<section
+    class="section"
+    id="halaya">
+
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <small>
+                لمسات خشبية
+            </small>
+
+            <h2>
+                الحلايا
+            </h2>
+
+            <p>
+                تصميمات وحلايا خشبية
+                للديكور والتشطيبات.
+            </p>
+
+        </div>
+
+
+        <div class="about">
+
+
+            <div>
+
+                <h2>
+                    الحلايا الخشبية
+                </h2>
+
+
+                <p>
+
+                    لو عندك تصميم معين
+                    أو صورة للحلية المطلوبة،
+                    ابعتها لنا ونقدر نتواصل
+                    معاك لتفاصيل التنفيذ.
+
+                </p>
+
+
+                <br>
+
+
+                <button
+                    class="button gold-button"
+                    onclick="sendWhatsApp('السلام عليكم، أريد الاستفسار عن قسم الحلايا')">
+
+                    استفسر على واتساب
+
+                </button>
+
+            </div>
+
+
+            <div class="about-image">
+
+                <img
+                    src="images/door-6.jpeg"
+                    alt="حلايا خشبية">
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================
+     من نحن
+================================== -->
+
+<section class="section">
+
+
+    <div class="container">
+
+
+        <div class="about">
+
+
+            <div class="about-image">
+
+                <img
+                    src="images/door-2.jpeg"
+                    alt="أعمال خشبية">
+
+            </div>
+
+
+            <div>
+
+                <h2>
+                    ابني بيتك
+                </h2>
+
+
+                <p>
+
+                    متخصصون في الأبواب
+                    والشبابيك والحلايا
+                    والتفصيل حسب الطلب.
+
+                </p>
+
+
+                <ul class="features">
+
+                    <li>
+                        الحي العاشر
+                    </li>
+
+                    <li>
+                        العاشر من رمضان
+                    </li>
+
+                    <li>
+                        محافظة الشرقية
+                    </li>
+
+                    <li>
+                        تفصيل حسب المقاس
+                    </li>
+
+                    <li>
+                        تواصل مباشر مع العميل
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================
+     التواصل
+================================== -->
+
+<section
+    class="section contact-section"
+    id="contact">
+
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <small>
+                تواصل معنا
+            </small>
+
+            <h2>
+                إحنا قريبين منك
+            </h2>
+
+            <p>
+                الحي العاشر - العاشر من رمضان
+                - محافظة الشرقية
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+            <div class="contact-card">
+
+                <div class="icon">
+                    💬
+                </div>
+
+                <h3>
+                    واتساب
+                </h3>
+
+                <a
+                    href="https://wa.me/201010881362"
+                    target="_blank">
+
+                    01010881362
+
+                </a>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="icon">
+                    📞
+                </div>
+
+                <h3>
+                    التليفون
+                </h3>
+
+                <a
+                    href="tel:01070498025">
+
+                    01070498025
+
+                </a>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="icon">
+                    📍
+                </div>
+
+                <h3>
+                    العنوان
+                </h3>
+
+                <p>
+                    الحي العاشر،
+                    العاشر من رمضان،
+                    محافظة الشرقية
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================
+     الفوتر
+================================== -->
+
+<footer>
+
+
+    <div class="container">
+
+
+        <div class="footer-grid">
+
+
+            <div>
+
+                <h3>
+                    ابني بيتك
+                </h3>
+
+                <p>
+                    أبواب وشبابيك وحلايا
+                    وتفصيل حسب الطلب.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    الأقسام
+                </h3>
+
+                <p>
+                    البيبان
+                    <br>
+                    تفصيل البيبان
+                    <br>
+                    الشبابيك
+                    <br>
+                    تفصيل الشبابيك
+                    <br>
+                    الحلايا
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    التواصل
+                </h3>
+
+                <p>
+                    واتساب:
+                    01010881362
+                </p>
+
+                <p>
+                    تليفون:
+                    01070498025
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 ابني بيتك
+            - جميع الحقوق محفوظة
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- ==================================
+     نافذة الصور
+================================== -->
+
+<div
+    class="modal"
+    id="galleryModal">
+
+
+    <div class="modal-content">
+
+
+        <button
+            class="close-modal"
+            onclick="closeGallery()">
+
+            ×
+
+        </button>
+
+
+        <h2>
+            صور باب كبس فلندي
+        </h2>
+
+
+        <div class="main-gallery">
+
+            <img
+                id="mainGalleryImage"
+                src="images/door-1.jpeg"
+                alt="باب كبس فلندي">
+
+        </div>
+
+
+        <div
+            class="thumbnails"
+            id="thumbnails">
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- ==================================
+     السلة
+================================== -->
+
+<aside
+    class="cart-panel"
+    id="cartPanel">
+
+
+    <div class="cart-header">
+
+        <h2>
+            🛒 سلة الطلب
+        </h2>
+
+
+        <button
+            class="close-cart"
+            onclick="closeCart()">
+
+            ×
+
+        </button>
+
+    </div>
+
+
+    <div
+        id="cartItems">
+
+        <p>
+            السلة فارغة.
+        </p>
+
+    </div>
+
+
+    <div
+        class="cart-total">
+
+        الإجمالي:
+
+        <span id="cartTotal">
+            0
+        </span>
+
+        جنيه
+
+    </div>
+
+
+    <button
+        class="whatsapp-order"
+        onclick="sendCartToWhatsApp()">
+
+        📲 إرسال الطلب على واتساب
+
+    </button>
+
+
+</aside>
+
+
+
+<!-- إشعار -->
+
+<div
+    class="toast"
+    id="toast">
+
+</div>
+
+
+
+<script>
+
+
+    /* =========================
+       بيانات الموقع
+    ========================= */
+
+
+    const whatsappNumber =
+        "201010881362";
+
+
+    const doorImages = [
+
+        "images/door-1.jpeg",
+
+        "images/door-2.jpeg",
+
+        "images/door-3.jpeg",
+
+        "images/door-4.jpeg",
+
+        "images/door-5.jpeg",
+
+        "images/door-6.jpeg",
+
+        "images/door-7.jpeg"
+
+    ];
+
+
+    let cart = [];
+
+
+
+    /* =========================
+       الانتقال للقسم
+    ========================= */
+
+
+    function goTo(id) {
+
+        const section =
+            document.getElementById(id);
+
+        if (section) {
+
+            section.scrollIntoView({
+                behavior: "smooth"
+            });
+
+        }
+
+    }
+
+
+
+    /* =========================
+       قائمة الموبايل
+    ========================= */
+
+
+    function mobileMenu() {
+
+        const menu =
+            document.querySelector(".nav-links");
+
+
+        if (
+            menu.style.display === "flex"
+        ) {
+
+            menu.style.display = "none";
+
+        } else {
+
+            menu.style.display = "flex";
+
+            menu.style.flexDirection =
+                "column";
+
+            menu.style.position =
+                "absolute";
+
+            menu.style.top = "70px";
+
+            menu.style.right = "4%";
+
+            menu.style.background =
+                "#17372b";
+
+            menu.style.padding =
+                "20px";
+
+            menu.style.borderRadius =
+                "10px";
+
+        }
+
+    }
+
+
+
+    /* =========================
+       إضافة للسلة
+    ========================= */
+
+
+    function addToCart() {
+
+
+        const product = {
+
+            name:
+                "باب كبس فلندي",
+
+            price:
+                2700,
+
+            image:
+                "images/door-1.jpeg"
+
+        };
+
+
+        cart.push(product);
+
+
+        updateCart();
+
+
+        showToast(
+            "تمت إضافة الباب إلى السلة"
+        );
+
+    }
+
+
+
+    /* =========================
+       تحديث السلة
+    ========================= */
+
+
+    function updateCart() {
+
+
+        document.getElementById(
+            "cartCount"
+        ).textContent =
+            cart.length;
+
+
+        const cartItems =
+            document.getElementById(
+                "cartItems"
+            );
+
+
+        if (cart.length === 0) {
+
+            cartItems.innerHTML =
+                "<p>السلة فارغة.</p>";
+
+        } else {
+
+
+            cartItems.innerHTML =
+                cart.map(
+                    (item, index) => `
+
+                    <div class="cart-item">
+
+                        <img
+                            src="${item.image}"
+                            alt="${item.name}">
+
+                        <div>
+
+                            <h4>
+                                ${item.name}
+                            </h4>
+
+                            <strong>
+                                ${item.price}
+                                جنيه
+                            </strong>
+
+                            <br>
+
+                            <button
+                                class="delete-item"
+                                onclick="removeItem(${index})">
+
+                                حذف
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                `
+                ).join("");
+
+        }
+
+
+        const total =
+            cart.reduce(
+                (sum, item) =>
+                    sum + item.price,
+                0
+            );
+
+
+        document.getElementById(
+            "cartTotal"
+        ).textContent =
+            total;
+
+    }
+
+
+
+    /* =========================
+       حذف من السلة
+    ========================= */
+
+
+    function removeItem(index) {
+
+        cart.splice(
+            index,
+            1
+        );
+
+
+        updateCart();
+
+    }
+
+
+
+    /* =========================
+       فتح السلة
+    ========================= */
+
+
+    function openCart() {
+
+        document
+            .getElementById("cartPanel")
+            .classList
+            .add("active");
+
+    }
+
+
+
+    /* =========================
+       إغلاق السلة
+    ========================= */
+
+
+    function closeCart() {
+
+        document
+            .getElementById("cartPanel")
+            .classList
+            .remove("active");
+
+    }
+
+
+
+    /* =========================
+       معرض الصور
+    ========================= */
+
+
+    function openGallery() {
+
+
+        const modal =
+            document.getElementById(
+                "galleryModal"
+            );
+
+
+        modal.classList.add("active");
+
+
+        const thumbnails =
+            document.getElementById(
+                "thumbnails"
+            );
+
+
+        thumbnails.innerHTML = "";
+
+
+        doorImages.forEach(
+            (image, index) => {
+
+
+                const img =
+                    document.createElement(
+                        "img"
+                    );
+
+
+                img.src = image;
+
+
+                img.onclick =
+                    function () {
+
+                        document
+                            .getElementById(
+                                "mainGalleryImage"
+                            )
+                            .src = image;
+
+                    };
+
+
+                thumbnails.appendChild(
+                    img
+                );
+
+            }
+        );
+
+    }
+
+
+
+    /* =========================
+       إغلاق معرض الصور
+    ========================= */
+
+
+    function closeGallery() {
+
+        document
+            .getElementById(
+                "galleryModal"
+            )
+            .classList
+            .remove("active");
+
+    }
+
+
+
+    /* =========================
+       واتساب
+    ========================= */
+
+
+    function sendWhatsApp(message) {
+
+
+        const url =
+            "https://wa.me/" +
+            whatsappNumber +
+            "?text=" +
+            encodeURIComponent(
+                message
+            );
+
+
+        window.open(
+            url,
+            "_blank"
+        );
+
+    }
+
+
+
+    /* =========================
+       إرسال السلة
+    ========================= */
+
+
+    function sendCartToWhatsApp() {
+
+
+        if (cart.length === 0) {
+
+            showToast(
+                "السلة فارغة"
+            );
+
+            return;
+
+        }
+
+
+        let message =
+            "السلام عليكم، أريد طلب:%0A%0A";
+
+
+        cart.forEach(
+            (item, index) => {
+
+                message +=
+                    `${index + 1}- ${item.name} - ${item.price} جنيه%0A`;
+
+            }
+        );
+
+
+        const total =
+            cart.reduce(
+                (sum, item) =>
+                    sum + item.price,
+                0
+            );
+
+
+        message +=
+            `%0Aالإجمالي: ${total} جنيه`;
+
+
+        window.open(
+            "https://wa.me/" +
+            whatsappNumber +
+            "?text=" +
+            message,
+            "_blank"
+        );
+
+    }
+
+
+
+    /* =========================
+       تفصيل البيبان
+    ========================= */
+
+
+    function sendCustomDoor(event) {
+
+
+        event.preventDefault();
+
+
+        const name =
+            document.getElementById(
+                "doorName"
+            ).value;
+
+
+        const phone =
+            document.getElementById(
+                "doorPhone"
+            ).value;
+
+
+        const width =
+            document.getElementById(
+                "doorWidth"
+            ).value;
+
+
+        const height =
+            document.getElementById(
+                "doorHeight"
+            ).value;
+
+
+        const notes =
+            document.getElementById(
+                "doorNotes"
+            ).value;
+
+
+        const message = `
+
+السلام عليكم 👋
+
+عايز أطلب تفصيل باب
+
+الاسم:
+${name}
+
+رقم الهاتف:
+${phone}
+
+عرض الباب:
+${width || "غير محدد"}
+
+ارتفاع الباب:
+${height || "غير محدد"}
+
+التفاصيل:
+${notes || "لا توجد تفاصيل إضافية"}
+
+سأرسل صورة التصميم في المحادثة.
+
+`;
+
+
+        sendWhatsApp(message);
+
+    }
+
+
+
+    /* =========================
+       تفصيل الشبابيك
+    ========================= */
+
+
+    function sendCustomWindow(event) {
+
+
+        event.preventDefault();
+
+
+        const name =
+            document.getElementById(
+                "windowName"
+            ).value;
+
+
+        const phone =
+            document.getElementById(
+                "windowPhone"
+            ).value;
+
+
+        const width =
+            document.getElementById(
+                "windowWidth"
+            ).value;
+
+
+        const height =
+            document.getElementById(
+                "windowHeight"
+            ).value;
+
+
+        const notes =
+            document.getElementById(
+                "windowNotes"
+            ).value;
+
+
+        const message = `
+
+السلام عليكم 👋
+
+عايز أطلب تفصيل شباك
+
+الاسم:
+${name}
+
+رقم الهاتف:
+${phone}
+
+العرض:
+${width || "غير محدد"}
+
+الارتفاع:
+${height || "غير محدد"}
+
+التفاصيل:
+${notes || "لا توجد تفاصيل إضافية"}
+
+سأرسل صورة التصميم في المحادثة.
+
+`;
+
+
+        sendWhatsApp(message);
+
+    }
+
+
+
+    /* =========================
+       معاينة الصور
+    ========================= */
+
+
+    function previewImages(
+        input,
+        previewId
+    ) {
+
+
+        const preview =
+            document.getElementById(
+                previewId
+            );
+
+
+        preview.innerHTML = "";
+
+
+        Array.from(
+            input.files
+        ).forEach(
+            file => {
+
+
+                const reader =
+                    new FileReader();
+
+
+                reader.onload =
+                    function (event) {
+
+
+                        const img =
+                            document.createElement(
+                                "img"
+                            );
+
+
+                        img.src =
+                            event.target.result;
+
+
+                        preview.appendChild(
+                            img
+                        );
+
+                    };
+
+
+                reader.readAsDataURL(
+                    file
+                );
+
+            }
+        );
+
+    }
+
+
+
+    /* =========================
+       إشعار
+    ========================= */
+
+
+    function showToast(message) {
+
+
+        const toast =
+            document.getElementById(
+                "toast"
+            );
+
+
+        toast.textContent =
+            message;
+
+
+        toast.classList.add(
+            "show"
+        );
+
+
+        setTimeout(
+            () => {
+
+                toast.classList.remove(
+                    "show"
+                );
+
+            },
+            2500
+        );
+
+    }
+
+
+
+    /* =========================
+       تشغيل الموقع
+    ========================= */
+
+
+    updateCart();
+
+
+</script>
+
+
+</body>
+
+</html>
